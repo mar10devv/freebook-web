@@ -1,11 +1,48 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/tailwind.css';
+import Navbar from '../components/navbar.astro';
+import HeroSection from '../components/herosection.astro';
+import FeatureCards from '../components/featurecards.astro';
+import AboutSection from '../components/aboutsection.astro';
+import BetaSection from '../components/betasection.astro';
+const screenshots = [
+  "/captura1.jpeg",
+  "/captura2.jpeg",
+  "/captura3.jpeg",
+  "/captura4.jpeg",
+  "/captura5.jpeg"
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreeBook beta - Descarga</title>
+  </head>
+ 
+  <body class="min-h-screen bg-gradient-to-tr from-primary/60 via-white to-primary/20">
+
+
+    <Navbar />
+
+    <main class="w-full text-center p-8 md:p-12 from-primary/10 via-white to-primary/30 z-10">
+
+      <HeroSection />
+      <FeatureCards />
+      <AboutSection />
+      <h1 class="text-4xl font-black mb-2 tracking-tight drop-shadow text-primary">
+        FreeBook <span class="font-light text-primary">beta</span>
+      </h1>
+      <p class="mb-6 text-gray-700">¡Lee tus libros PDF favoritos gratis!<br />Un lector simple, rápido y sin anuncios.</p>
+    
+      <BetaSection />
+
+      <footer class="text-sm text-gray-500 mt-6">
+        ¿Dudas o sugerencias? <a href="mailto:tuemail@dominio.com" class="underline font-semibold text-primary">Contáctanos</a>
+      </footer>
+    </main>
+    <p class="mt-6 text-xs text-gray-400">© 2025 FreeBook beta. Todos los derechos reservados.</p>
+  </body>
+</html>

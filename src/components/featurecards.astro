@@ -1,0 +1,35 @@
+---
+const features = [
+  {
+    title: "Lector PDF sin anuncios",
+    desc: "Disfruta tus libros PDF favoritos sin interrupciones, de manera rápida y sin publicidad molesta.",
+    icon: "📖"
+  },
+  {
+    title: "Modo nocturno",
+    desc: "Protege tu vista con el modo nocturno, ideal para leer en ambientes con poca luz.",
+    icon: "🌙"
+  },
+  {
+    title: "Gestión de biblioteca",
+    desc: "Organiza y accede a todos tus libros desde un solo lugar, de forma simple y visual.",
+    icon: "📚"
+  },
+  {
+    title: "Añade marcadores",
+    desc: "Agrega marcadores fácilmente y nunca olvides en qué página dejaste tu lectura. ¡Retoma tus libros justo donde los dejaste!",
+    icon: "🔖"
+  },
+];
+---
+<div class="w-full flex flex-col items-center mb-12">
+  <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full max-w-5xl">
+    {features.map((f) => (
+      <div class="bg-white/70 border border-primary/20 rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+        <div class="text-4xl mb-3">{f.icon}</div>
+        <h3 class="text-lg font-bold text-primary mb-2">{f.title}</h3>
+        <p class="text-gray-700 text-sm">{f.desc}</p>
+      </div>
+    ))}
+  </div>
+</div>
