@@ -6,6 +6,7 @@ import FeatureCards from '../components/featurecards.astro';
 import AboutSection from '../components/aboutsection.astro';
 import BetaSection from '../components/betasection.astro';
 import Comentarios from '../components/comentarios.astro';
+import ContactModal from '../components/contactomodal.astro';
 import '../styles/global.css';
 const screenshots = [
   "/captura1.jpeg",
@@ -43,10 +44,39 @@ const screenshots = [
     
       <BetaSection />
       <Comentarios />
+      <ContactModal />
+      <button 
+  id="scrollToTopBtn"
+  aria-label="Volver arriba"
+  class="hidden fixed bottom-8 right-8 z-50 bg-primary text-white rounded-full shadow-lg p-4 transition-opacity opacity-0 hover:opacity-90 active:scale-95"
+>
+  <!-- SVG color siempre será blanco por la clase text-white -->
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    class="w-7 h-7"
+  >
+    <path 
+      d="M17 15L12 10L7 15" 
+      stroke="currentColor" 
+      stroke-width="1.5" 
+      stroke-linecap="round" 
+      stroke-linejoin="round"
+    />
+  </svg>
+</button>
+
+
+
       <footer class="text-sm text-gray-500 mt-6">
-        ¿Dudas o sugerencias? <a href="mailto:tuemail@dominio.com" class="underline font-semibold text-primary">Contáctanos</a>
+        ¿Dudas o sugerencias? <a href="mailto:martinmartinezcontacto@gmail.com" class="underline font-semibold text-primary">Contáctanos</a>
       </footer>
     </main>
     <p class="mt-6 text-xs text-gray-400">© 2025 FreeBook beta. Todos los derechos reservados.</p>
+    <script src="/js/scrollToTop.js" is:inline></script>
+    <script src="/js/contactModal.js" is:inline></script>
+
+
   </body>
 </html>

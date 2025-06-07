@@ -1,6 +1,6 @@
 ---
 const links = [
-  { href: "#inicio", label: "Inicio" },
+  { href: "/", label: "Inicio" },
   { href: "#features", label: "Información" },
   { href: "#contacto", label: "Contacto" }
 ];
@@ -13,7 +13,13 @@ const links = [
       <!-- ENLACES DESKTOP -->
       <div class="hidden md:flex space-x-4">
         {links.map(link => (
-          <a href={link.href} class="text-primary font-medium">{link.label}</a>
+          <a
+            href={link.href}
+            class="text-primary font-medium"
+            {...(link.label === "Contacto" ? { id: "navbarContactBtn" } : {})}
+          >
+            {link.label}
+          </a>
         ))}
       </div>
       <!-- BOTÓN HAMBURGUESA/CERRAR -->
@@ -43,7 +49,10 @@ const links = [
         <a
           href={link.href}
           class="block py-3 w-full text-center border-b  text-primary hover:bg-primary/10 font-medium"
-        >{link.label}</a>
+          {...(link.label === "Contacto" ? { id: "navbarContactBtnMobile" } : {})}
+        >
+          {link.label}
+        </a>
       ))}
     </div>
   </div>
