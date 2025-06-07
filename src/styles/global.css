@@ -1,0 +1,15 @@
+:root {
+    --cusdis-bg: #faf6ff;
+    --cusdis-color: #7c3aed;
+    --cusdis-border: #7c3aed;
+    --cusdis-color-secondary: #47239b;
+    --cusdis-color-placeholder: #a78bfa;
+    --cusdis-color-input: #7c3aed;
+    --cusdis-color-btn: #fff;
+    --cusdis-bg-btn: #7c3aed;
+    --cusdis-color-btn-hover: #fff;
+    --cusdis-bg-btn-hover: #5b21b6;
+    --cusdis-avatar-border: #a78bfa;
+    --cusdis-font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  }
+  

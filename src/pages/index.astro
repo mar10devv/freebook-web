@@ -5,6 +5,8 @@ import HeroSection from '../components/herosection.astro';
 import FeatureCards from '../components/featurecards.astro';
 import AboutSection from '../components/aboutsection.astro';
 import BetaSection from '../components/betasection.astro';
+import Comentarios from '../components/comentarios.astro';
+import '../styles/global.css';
 const screenshots = [
   "/captura1.jpeg",
   "/captura2.jpeg",
@@ -21,7 +23,7 @@ const screenshots = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/icono.ico" />
     <title>FreeBook beta - Descarga</title>
-
+  
   </head>
  
   <body class="min-h-screen bg-gradient-to-tr from-primary/60 via-white to-primary/20">
@@ -40,7 +42,7 @@ const screenshots = [
       <p class="mb-6 text-gray-700">¡Lee tus libros PDF favoritos gratis!<br />Un lector simple, rápido y sin anuncios.</p>
     
       <BetaSection />
-
+      <Comentarios />
       <footer class="text-sm text-gray-500 mt-6">
         ¿Dudas o sugerencias? <a href="mailto:tuemail@dominio.com" class="underline font-semibold text-primary">Contáctanos</a>
       </footer>

@@ -1,0 +1,31 @@
+---
+const appId = "d206c241-6c9d-4c26-baf4-4a71d714cd21";
+---
+<section class="max-w-4xl mx-auto my-12 px-8 py-12 bg-primary/10 rounded-3xl shadow-2xl border-4 border-primary/20 flex flex-col items-center">
+  <h2 class="text-3xl md:text-4xl font-black mb-6 text-primary drop-shadow">Comentarios</h2>
+  <p class="mb-6 text-primary font-semibold">Deja tus sugerencias, dudas o tu experiencia usando FreeBook 👇</p>
+  <div
+  data-lang="es"
+
+    id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id={appId}
+    data-page-id={Astro.url.pathname}
+    data-page-url={Astro.url.href}
+    data-page-title={Astro.url.pathname}
+    data-theme="light"
+    data-lang="es"
+    class="w-full"
+  ></div>
+  <script is:inline>
+    if (!window.CUSDIS_LOADED) {
+      var s = document.createElement('script');
+      s.src = 'https://cusdis.com/js/cusdis.es.js';
+      s.async = true;
+      s.defer = true;
+      document.body.appendChild(s);
+      window.CUSDIS_LOADED = true;
+    }
+  </script>
+  <noscript>Por favor, habilita JavaScript para ver los comentarios.</noscript>
+</section>
